@@ -28,3 +28,8 @@ paginating on scroll would be beneficial. Probably dividing the `PaymentsDisplay
 would be an improvement. Adding prettier autorunner for nicer code formatting, probably installing a code
 style like `Airbnb` eslint rules would improve the code further. Moving out the utility functions outside 
 of the relevant components and moving them to a service would be an improvement too.
+
+
+### React query devtools
+
+You can add devtools to see the state just add `<ReactQueryDevtools initialIsOpen={false} />` within the query client provider block
