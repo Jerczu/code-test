@@ -29,6 +29,8 @@ would be an improvement. Adding prettier autorunner for nicer code formatting, p
 style like `Airbnb` eslint rules would improve the code further. Moving out the utility functions outside 
 of the relevant components and moving them to a service would be an improvement too.
 
+Probably should add more extensive tests these are a bit trivial. Probably add some property based tests using fastcheck.
+
 
 ### React query devtools
 
