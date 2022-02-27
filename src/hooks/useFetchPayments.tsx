@@ -1,6 +1,5 @@
-import { useCallback, useEffect, useState } from "react";
-import { IApiMetadata, IApiResponse, IApiResults } from "../data/models";
-import { useInfiniteQuery, useQuery } from "react-query";
+import { IApiResponse, IApiResults } from "../data/models";
+import { useInfiniteQuery } from "react-query";
 
 const dataFetcher = async function <T>(
   endpoint: string,
@@ -22,7 +21,7 @@ export function useFetchPayments() {
 
   const { data, fetchNextPage, hasNextPage, isFetching, isFetchingNextPage } =
     useInfiniteQuery("payments", fetchPayments, {
-      getNextPageParam: (lastPage, pages) =>
+      getNextPageParam: (lastPage) =>
         lastPage.metaData.hasMoreElements
           ? lastPage.metaData.nextPageIndex
           : undefined,
